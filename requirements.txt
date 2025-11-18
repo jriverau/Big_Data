@@ -1,2 +1,7 @@
 streamlit
 pandas
+pyvis
+networkx
+plotly
+matplotlib
+graphviz
