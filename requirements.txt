@@ -5,3 +5,4 @@ networkx
 plotly
 matplotlib
 graphviz
+neo4j
