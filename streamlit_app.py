@@ -57,11 +57,11 @@ import networkx as nx
 st.title("Grafo interactivo conectado a Neo4j")
 
 # Conexión a Neo4j (usar secrets en Streamlit Cloud)
-uri = st.secrets["neo4j"]["uri"]
-user = st.secrets["neo4j"]["user"]
-password = st.secrets["neo4j"]["password"]
+# uri = st.secrets["neo4j"]["uri"]
+# user = st.secrets["neo4j"]["user"]
+# password = st.secrets["neo4j"]["password"]
 
-driver = GraphDatabase.driver(uri, auth=(user, password))
+driver = GraphDatabase.driver(URI, auth=AUTH)
 
 def get_graph(tx):
     query = """
