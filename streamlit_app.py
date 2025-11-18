@@ -14,8 +14,6 @@ st.title("Grafo interactivo conectado a Neo4j")
 # user = st.secrets["neo4j"]["user"]
 # password = st.secrets["neo4j"]["password"]
 
-URI = "neo4j+s://b29b29cb.databases.neo4j.io"
-AUTH= ("neo4j", "D7MvqURA0Ov-q71KDA9ZqkvU2FeEjn2DsIK5RlodsSg")
 
 # driver = GraphDatabase.driver(uri, auth=(user, password))
 driver = GraphDatabase.driver(URI, auth=AUTH)
