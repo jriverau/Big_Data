@@ -12,11 +12,11 @@ def get_graph(tx):
     RETURN a, r, b
     LIMIT 100
     """
-    return tx.run(query).data()
+    return list(tx.run(query))
 
 def load_graph():
     with driver.session() as session:
-        return session.read_transaction(get_graph)
+        return session.execute_read(get_graph)
 import networkx as nx
 
 def neo4j_to_networkx(records):
@@ -84,7 +84,7 @@ def neo4j_to_nx(records):
 
 # Cargar datos
 with driver.session() as session:
-    records = session.read_transaction(get_graph)
+    records = session.execute_read(get_graph)
 
 G = neo4j_to_nx(records)
 
